@@ -1,0 +1,93 @@
+{
+    "pages": [
+        {
+            "groups": [
+                {
+                    "rowType": "fullwidth",
+                    "className": "group-card group-1 highlight-title",
+                    "title": "Custom date field sample",
+                    "description": "This custom date field uses the 'react-datepicker' in order to pick date from a calendar. In this configuration, the 'perioFrom' date picker will disable dates after 'perioTo' and the 'perioTo' date picker will disable dates before 'perioFrom'. Be aware to to keep 'datePicker.swapMonthAndDay' property with same value in related fields like the following two to avoid undesired behavior.",
+                    "fields": {
+                        "periodFrom": {
+                            "type": "custom",
+                            "className": "float-label-field date-picker",
+                            "label": "Period (From):",
+                            "requiredMark": true,
+                            "placeHolder": "mm/dd/yyyy",
+                            "value": null,
+                            "errorMessage": null,
+                            "datePicker": {
+                                "enabled": true,
+                                "topWhileAboveInput": -15,
+                                "topWhileUnderInput": 22,
+                                "maxDateField": "periodTo",
+                                "locale": null,
+                                "swapMonthAndDay": false
+                            }
+                        },
+                        "periodTo": {
+                            "type": "custom",
+                            "className": "float-label-field date-picker",
+                            "label": "Period (To):",
+                            "requiredMark": true,
+                            "placeHolder": "mm/dd/yyyy",
+                            "value": null,
+                            "errorMessage": null,
+                            "datePicker": {
+                                "enabled": true,
+                                "topWhileAboveInput": -15,
+                                "topWhileUnderInput": 33,
+                                "minDateField": "periodFrom",
+                                "locale": null,
+                                "swapMonthAndDay": false
+                            }
+                        }
+                    }
+                },
+                {
+                    "rowType": "fullwidth",
+                    "className": "group-card group-2 highlight-title",
+                    "title": "Simple date field test",
+                    "description": "This custom field ('simpleDate') without date picker configured.",
+                    "fields": {
+                        "simpleDate": {
+                            "type": "custom",
+                            "className": "float-label-field",
+                            "label": "Simple date",
+                            "requiredMark": false,
+                            "placeHolder": "mm/dd/yyyy",
+                            "value": null,
+                            "errorMessage": null
+                        }
+                    }
+                },
+                {
+                    "rowType": "fullwidth",
+                    "className": "group-card group-3 highlight-title",
+                    "title": "Datepicker with date limit and swaped month and day",
+                    "description": "This custom field ('rangedDate') allows you to pick a date in 2022 (In this configuration it applies only to date picker, not to input if typed). As a usage sample the following field has its 'datePicker.swapMonthAndDay' property set to true, so the date format is 'dd/mm/yyyy'.",
+                    "fields": {
+                        "rangedDate": {
+                            "type": "custom",
+                            "className": "float-label-field date-picker",
+                            "label": "Ranged data:",
+                            "requiredMark": true,
+                            "placeHolder": "dd/mm/yyyy",
+                            "value": null,
+                            "errorMessage": null,
+                            "datePicker": {
+                                "enabled": true,
+                                "topWhileAboveInput": -15,
+                                "topWhileUnderInput": 33,
+                                "minDate": "01/01/2022",
+                                "maxDate": "31/12/2022",
+                                "locale": null,
+                                "swapMonthAndDay": true
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

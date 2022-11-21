@@ -1,0 +1,96 @@
+/* Datepicker customization */
+.date-picker {
+    ._djfb_grid-column {
+        .input-wrapper {
+            position: relative;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            .date-picker-wrapper {
+                z-index: 1;
+                position: absolute;
+                display: inline-block;
+                left: 0;
+    
+                &.not-visible {
+                    display: none;
+                }
+    
+                & > .triangle-up, & > .triangle-down {
+                    border-style: solid;
+                    border-image: initial;
+                    margin-left: 45px;
+                    height: 0;
+                    width: 0;
+                    filter: drop-shadow(0 0 1px #555);
+
+                    &.not-visible {
+                        display: none;
+                    }
+                }
+    
+                & > .triangle-up {
+                    border-color: transparent transparent #fff transparent;
+                    border-width: 0 10.5px 12px 10.5px;
+                }
+                
+                & > .triangle-down {
+                    border-color: #fff transparent transparent transparent;                
+                    border-width: 12px 10.5px 0 10.5px;
+                    margin-top: -4px;
+                }
+            }
+
+            $datePicker-size: 26px;
+            $date-picker-wrapper-width: calc(#{$datePicker-size} + 4px);
+            .date-picker-trigger {
+                position: relative;
+                width: $date-picker-wrapper-width;
+            
+                & > .button-wrapper {
+                    position: absolute;
+                    display: inline-block;
+                    height: $datePicker-size;
+                    width: $datePicker-size;
+                    right: 0;
+
+                    top: 50%;
+                    -webkit-transform: translateY(-50%);
+                    -ms-transform: translateY(-50%);
+                    transform: translateY(-50%);
+    
+                    & > button {
+                        cursor: pointer;
+                        position: absolute;
+                        height: $datePicker-size;
+                        width: $datePicker-size;
+                        padding: 0;
+                        right: 0;
+    
+                        border: 1px solid #aaa;
+                        border-radius: 3px;
+                        background-color: #fff;
+    
+                        &:active, &:focus {
+                            outline: none;
+                        }
+    
+                        &:hover {
+                            background-color: #ddd;
+                        }
+    
+                        .trigger-icon {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            -webkit-transform: translate(-50%, -50%);
+                            -ms-transform: translate(-50%, -50%);
+                            transform: translate(-50%, -50%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

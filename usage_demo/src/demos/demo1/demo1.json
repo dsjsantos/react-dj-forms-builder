@@ -1,0 +1,293 @@
+{
+    "pages": [
+        {
+            "groups": [
+                {
+                    "rowType": "fullwidth",
+                    "className": "group-card highlight-title group-1",
+                    "title": "General fields",
+                    "description": "This section shows general fields on a full width row (one field per column and one column per row)",
+                    "fields": {
+                        "textField": {
+                            "type": "input",
+                            "className": "text-field-1",
+                            "label": "Text Field (up to 100 chars)",
+                            "disabled": false,
+                            "placeHolder": "Enter some text",
+                            "requiredMark": true,
+                            "value": null,
+                            "errorMessage": null,
+                            "regExInput": "^[!-;?-~à-úA-ZÀ-Ú ']{1,100}$"
+                        },
+                        "hexaField": {
+                            "type": "input",
+                            "className": "hexa-field",
+                            "label": "Hexa Field (hexa value up to 64 bits)",
+                            "disabled": false,
+                            "placeHolder": "Hexadecimal value (64 bits)",
+                            "requiredMark": false,
+                            "value": null,
+                            "errorMessage": null,
+                            "regExInput": "^[0-9a-fA-F]{1,16}$"
+                        },
+                        "numberWithCheckDigit": {
+                            "type": "input",
+                            "className": "number-with-cd",
+                            "label": "Number with check digit (masked XXXXX/X)",
+                            "disabled": false,
+                            "placeHolder": "Codigo XXXXX/X",
+                            "requiredMark": false,
+                            "value": null,
+                            "errorMessage": null,
+                            "regExInput": "^[0-9]{1,6}$"
+                        },
+                        "passphrase": {
+                            "type": "input",
+                            "className": "passphrase-field",
+                            "label": "Passphrase (chars not displayed)",
+                            "disabled": false,
+                            "placeHolder": "Passphrase",
+                            "requiredMark": false,
+                            "isPasswordInput": true,
+                            "value": null,
+                            "errorMessage": null,
+                            "regExInput": "^[!-;?-~à-úA-ZÀ-Ú ']{1,63}$"
+                        },
+                        "checkBox1": {
+                            "type": "checkbox",
+                            "className": "checkbox-field-1",
+                            "disabled": false,
+                            "label": "Checkbox 1",
+                            "value": false,
+                            "errorMessage": null
+                        },
+                        "checkBox2": {
+                            "type": "checkbox",
+                            "className": "checkbox-field-1",
+                            "disabled": false,
+                            "label": "Checkbox 2",
+                            "labelBefore": true,
+                            "value": false,
+                            "errorMessage": null
+                        },
+                        "memo": {
+                            "type": "textarea",
+                            "className": "memo-field",
+                            "rows": 4,
+                            "disabled": false,
+                            "label": "Memo (text area with counter at top and bottom)",
+                            "placeHolder": "Type a memo here",
+                            "requiredMark": true,
+                            "value": null,
+                            "errorMessage": null,
+                            "regExInput": "^[!-;?-~à-úA-ZÀ-Ú ']{1,500}$",
+                            "counter": {
+                                "top": true,
+                                "bottom": true,
+                                "minCount": 10,
+                                "maxCount": 500
+                            }
+                        },
+                        "Dropdown": {
+                            "type": "dropdown",
+                            "className": "dropdown-field amb-dd-setor",
+                            "label": "Dropdown:",
+                            "disabled": false,
+                            "placeHolder": "Select one option",
+                            "requiredMark": true,
+                            "value": null,
+                            "errorMessage": null,
+                            "options": [
+                                { "value": "opt1", "text": "Option 1" },
+                                { "value": "opt2", "text": "Option 2" },
+                                { "value": "opt3", "text": "Option 3" }
+                            ]
+                        },
+                        "radioGroup1": {
+                            "type": "radio-group",
+                            "className": "radio-group-wrapper",
+                            "label": "Radio Group 1 (you may uncheck with dlb click or context menu):",
+                            "disabled": false,
+                            "value": null,
+                            "errorMessage": null,
+                            "items": [
+                                { "className": "radio-field type-1", "label": "Radio Option 1", "value": "ro1" },
+                                { "className": "radio-field type-2", "label": "Radio Option 2", "value": "ro2" },
+                                { "className": "radio-field type-3", "label": "Radio Option 3", "value": "ro3" }
+                            ],
+                            "uncheckOnDoubleClick": true,
+                            "uncheckOnContextMenu": true
+                        },
+                        "radioGroup2": {
+                            "type": "radio-group",
+                            "className": "radio-group-wrapper",
+                            "label": "Radio Group 2 (specific item with label before radio/ uncheck disabled):",
+                            "disabled": false,
+                            "requiredMark": true,
+                            "value": null,
+                            "errorMessage": null,
+                            "items": [
+                                { "className": "radio-field type-1", "label": "Option 1", "value": "ro1", "labelBefore": true },
+                                { "className": "radio-field type-2", "label": "Option 2", "value": "ro2" }
+                            ],
+                            "uncheckOnDoubleClick": false,
+                            "uncheckOnContextMenu": false
+                        }
+                    }
+                },
+                {
+                    "rowType": "fullwidth",
+                    "className": "group-card highlight-title group-2",
+                    "title": "Children fields",
+                    "description": "The following sections shows children/nested fields.",
+                    "fields": null
+                },
+                {
+                    "rowType": "fullwidth",
+                    "className": "group-card",
+                    "description": "This is a checkbox field that, when checked, will show extra fields on a splited row (two columns per row):",
+                    "fields": {
+                        "extraData": {
+                            "type": "checkbox",
+                            "className": "checkbox-extra-data",
+                            "label": "Extra Data (Check it to enter extra data)",
+                            "disabled": false,
+                            "value": false,
+                            "errorMessage": null,
+                            "hideChildren": true,
+                            "children": [
+                                {
+                                    "rowType": "split",
+                                    "className": "group-extra-data",
+                                    "fields": {
+                                        "extraDataValue1": {
+                                            "type": "input",
+                                            "className": "data-value-1",
+                                            "label": "Extra Data Value 1 (text)",
+                                            "disabled": false,
+                                            "placeHolder": "text value",
+                                            "value": null,
+                                            "errorMessage": null
+                                        },
+                                        "extraDataValue2": {
+                                            "type": "input",
+                                            "className": "data-value-2",
+                                            "label": "Extra Data Value 2 (integer)",
+                                            "disabled": false,
+                                            "placeHolder": "integer value",
+                                            "value": null,
+                                            "errorMessage": null,
+                                            "regExInput": "^[0-9]{1,10}$"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "render": true,
+                    "rowType": "fullwidth",
+                    "className": "group-card",
+                    "title": "Radio selection with nested fields",
+                    "description": "According to radio 'group type' selection a specific content will be displayed.",
+                    "requiredMarkTitle": true,
+                    "requiredMarkDescription": false,
+                    "fields": {
+                        "groupType": {
+                            "type": "radio-group",
+                            "className": "radio-field",
+                            "label": null,
+                            "disabled": false,
+                            "value": "NORMAL",
+                            "errorMessage": null,
+                            "hideChildren": true,
+                            "items": [
+                                { "label": "Normal", "className": "rb-wrapper", "value": "NORMAL", "childrenIndex": [ 0 ] },
+                                { "label": "Enhanced", "className": "rb-wrapper", "value": "ENHANCED", "childrenIndex": [ 1, 2 ] }
+                            ],
+                            "children": [
+                                {
+                                    "rowType": "fullwidth",
+                                    "className": "subgroup-card",
+                                    "description": "This is the normal mode. No extra informatin is required.",
+                                    "fields": null
+                                },
+                                {
+                                    "rowType": "fullwidth",
+                                    "className": "subgroup-card",
+                                    "description": "This is the first enhanced card, below the second :D",
+                                    "fields": null
+                                },
+                                {
+                                    "rowType": "flex",
+                                    "className": "subgroup-card interval-group",
+                                    "title": "Extra Information:",
+                                    "description": "This fields are in a flex row wich may break line according to viewport width",
+                                    "fields": {
+                                        "groupIntervalBegin": {
+                                            "type": "input",
+                                            "className": "input-field begin",
+                                            "label": "Group interval begin",
+                                            "disabled": false,
+                                            "placeHolder": "Enter the initial value",
+                                            "requiredMark": true,
+                                            "value": null,
+                                            "errorMessage": null,
+                                            "regExInput": "^[0-9]{1,10}$"
+                                        },
+                                        "groupIntervalEnd": {
+                                            "type": "input",
+                                            "className": "input-field end",
+                                            "label": "Group interval end",
+                                            "disabled": false,
+                                            "placeHolder": "Enter the final value",
+                                            "requiredMark": true,
+                                            "value": null,
+                                            "errorMessage": null,
+                                            "regExInput": "^[0-9]{1,10}$"
+                                        },
+                                        "groupDescription": {
+                                            "type": "input",
+                                            "className": "input-field description",
+                                            "label": "Group Description (up to 100 chars)",
+                                            "disabled": false,
+                                            "placeHolder": "Enter a description",
+                                            "requiredMark": false,
+                                            "value": null,
+                                            "errorMessage": null,
+                                            "regExInput": "^[!-;?-~à-úA-ZÀ-Ú ']{1,100}$"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "groups": [
+                {
+                    "rowType": "fullwidth",
+                    "className": "group-card highlight-title tomato",
+                    "title": "Second page (single section)",
+                    "description": "This si a single page section",
+                    "fields": {
+                        "simpleTextField": {
+                            "type": "input",
+                            "className": "text-field-1",
+                            "label": "Text Field 1 (up to 10 chars)",
+                            "disabled": false,
+                            "placeHolder": "Enter some text",
+                            "requiredMark": false,
+                            "value": null,
+                            "errorMessage": null,
+                            "regExInput": "^[!-;?-~à-úA-ZÀ-Ú ']{1,10}$"
+                        }
+                    }
+                }
+            ]
+        }        
+    ]
+}

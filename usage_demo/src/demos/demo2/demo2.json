@@ -1,0 +1,70 @@
+{
+    "pages": [
+        {
+            "groups": [
+                {
+                    "rowType": "fullwidth",
+                    "className": "group-card group-1 highlight-title",
+                    "title": "Custom field sample",
+                    "description": "This section shows a custom field usage sample with label. you may user 'dblClick' or 'contextClick' to unselect a value.",
+                    "fields": {
+                        "rating1": {
+                            "type": "custom",
+                            "className": "radio-group-score responsive",
+                            "label": "Rating1: Enter a rating between 1 and 5:",
+                            "requiredMark": true,
+                            "start": 1,
+                            "length": 5,
+                            "value": null,
+                            "errorMessage": null
+                        },
+                        "rating2": {
+                            "type": "custom",
+                            "className": "radio-group-score responsive",
+                            "label": "Rating2: This one should be between 0 and 5:",
+                            "start": 0,
+                            "length": 6,
+                            "value": null,
+                            "errorMessage": null
+                        },
+                        "rating3": {
+                            "type": "custom",
+                            "className": "radio-group-score responsive",
+                            "label": "Rating3: This one is disabled:",
+                            "disabled": true,
+                            "start": 0,
+                            "length": 11,
+                            "value": null,
+                            "errorMessage": null
+                        },
+                        "rating4": {
+                            "type": "custom",
+                            "className": "radio-group-score responsive",
+                            "label": "Rating4: This one starts at 0 and has 11 possible values:",
+                            "requiredMark": true,
+                            "start": 0,
+                            "length": 11,
+                            "value": null,
+                            "errorMessage": null
+                        }
+                    }
+                },
+                {
+                    "rowType": "fullwidth",
+                    "className": "group-card group-1 highlight-title",
+                    "description": "The following usage shows the component without label (Rating5)",
+                    "fields": {
+                        "rating5": {
+                            "type": "custom",
+                            "className": "radio-group-score responsive",
+                            "start": 0,
+                            "length": 11,
+                            "value": null,
+                            "errorMessage": null
+                        }
+                    }
+                }
+            ]
+        }        
+    ]
+}

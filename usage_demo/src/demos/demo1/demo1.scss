@@ -1,0 +1,70 @@
+.demo1-wrapper {
+    .new-regex {
+        margin-left: 0.75em;
+    }
+
+    .group-card {
+        &.highlight-title ._djfb_grid-group-title {
+            color: white;
+            background-color: darkorange;
+        }
+
+        &.highlight-title.tomato ._djfb_grid-group-title {
+            color: white;
+            background-color: tomato;
+        }
+    }
+
+    .text-field-1 {
+        input { width: 210px; }
+    }
+
+    .hexa-field {
+        input { width: 250px; }
+    }
+
+    .number-with-cd {
+        input { width: 290px; }
+    }
+
+    .passphrase-field {
+        input { width: 220px; }
+    }
+
+    .memo-field {
+        textarea {
+            width: calc(100% - 6px); // borders and padding
+            min-height: 45px;
+            resize: vertical;
+        }
+
+        .with-counter {
+            .input-counter {
+                text-align: right;
+
+                .count-current {
+                    &.invalid { color: orange; }
+                    &.valid { color: green; }
+                    &.zero { color: red; }
+                }
+            }
+        }
+    }
+
+    .interval-group {
+        ._djfb_grid-cell.children {
+            &:not(:last-of-type) {
+                margin-right: 0.5em;
+            }
+
+            .input-field {
+                &.begin, &.end {
+                    input { width: 130px; }
+                }
+                &.description {
+                    input { width: 210px; }
+                }
+            }
+        }
+    }
+}

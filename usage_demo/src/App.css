@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+    padding: 1em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    background-color: white;
+    color: black;
+}
+
+h1 {
+    padding: 0.5em 0;
+    text-align: center;
+    background-color: rgb(200, 112, 5);
+    color: white;
+}

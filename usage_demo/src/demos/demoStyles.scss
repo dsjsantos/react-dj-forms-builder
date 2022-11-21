@@ -1,0 +1,100 @@
+h3.section-title {
+    margin-block-end: 1.5em;
+}
+
+.button-row {
+    margin-bottom: 0.5em;
+
+    button:not(:first-child) {
+        margin-left: 0.75em;
+    }
+}
+
+.main-form {
+    margin-top: 2em;
+}
+
+.group-card {
+    background-color: #ddd;
+    padding: 0.75em 1em;
+    margin-top: 1em;
+    border-radius: 3px;
+
+    &.highlight-title {
+        ._djfb_grid-group-title {
+            font-weight: bold;
+            margin: 0 -1em;
+            margin-top: -1em;
+            padding: 0.5em 1em;
+        }
+    }
+
+    .field-required-mark {
+        color: red !important;
+    }
+
+    ._djfb_grid-group-description:not(:first-child) {
+        margin-top: 0.5em;
+    }
+
+    ._djfb_grid-group-content {
+        font-size: 0.85em;
+
+        &:not(:empty) {
+            margin-top: 1em;
+        }
+
+        ._djfb_grid-row.parent {
+            &:not(:first-of-type) {
+                margin-top: 0.75em;
+            }
+        }
+
+        .group-children {
+            margin-top: 1em;
+            margin-left: 1.7em;
+            padding: 0.75em;
+            border-radius: 3px;
+            border: thin solid black;
+
+            &:not(:last-child) {
+                margin-bottom: 0.75em;
+            }
+
+            ._djfb_grid-group-title {
+                font-style: italic;
+            }
+        }
+
+        .field-error {
+            color: red;
+        }
+    }
+}
+
+.demo-button {
+    padding: 0.5em 1em;
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    border-radius: 3px;
+    border: thin solid rgb(3, 3, 107);
+
+    &:active, &:focus {
+        &:not(:hover) {
+            color: #ddd;
+            background-color: rgb(82, 82, 214);
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+        border-color: rgb(110, 110, 216);
+        box-shadow: inset 0px 0px 0px 2px rgb(110, 110, 216);
+    }
+
+    span {
+        text-transform: uppercase;
+    }
+}
+

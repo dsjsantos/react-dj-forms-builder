@@ -1,0 +1,42 @@
+.demo2-wrapper {
+    .group-card.highlight-title {
+        ._djfb_grid-group-title {
+            color: #ffdf00;
+            background-color: #009c3b;
+        }
+    }
+
+    .radio-group-score {
+        .score-grades, .radio-field {
+            overflow: hidden;
+        }
+
+        .score-grades {
+            margin-top: 8px;
+
+            .rb-score-wrapper {
+                text-align: center;
+            }
+        }
+
+        .grades-wrapper {
+            text-align: left;
+            display: inline-block;
+            min-width: 280px;
+        }
+
+        .rb-score-wrapper {
+            display: inline-block;
+            width: 21px;
+            font-size: inherit;
+
+            &:not(:last-child) {
+                margin-right: 4px;
+            }
+
+            &.disabled {
+                color: #999;
+            }
+        }
+    }
+}
