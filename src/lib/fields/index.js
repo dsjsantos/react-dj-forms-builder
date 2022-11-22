@@ -5,6 +5,7 @@ const FieldDropdown = require('./fieldDropdown.js').default;
 const FieldInput = require('./fieldInput.js').default;
 const FieldRadioGroup = require('./fieldRadioGroup.js').default;
 const FieldTextarea = require('./fieldTextarea.js').default;
+const FieldNone = require('./fieldNone.js').default;
 
 export {
     Counter,
@@ -13,5 +14,6 @@ export {
     FieldDropdown,
     FieldInput,
     FieldRadioGroup,
-    FieldTextarea
+    FieldTextarea,
+    FieldNone
 }

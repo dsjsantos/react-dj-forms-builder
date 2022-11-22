@@ -169,6 +169,10 @@ npm run build
 
 ## Changelogs
 
+#### v1.1.1 (November 22, 2022)
+##### Fixed
+- "none" field type now renders its children correctly
+
 #### v1.1.0 (November 21, 2022)
 - First published version of the component
 

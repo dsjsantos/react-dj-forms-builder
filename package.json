@@ -1,6 +1,6 @@
 {
   "name": "react-dj-forms-builder",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "private": false,
   "description": "A JSON based forms builder react component",
   "main": "./dist/index.js",

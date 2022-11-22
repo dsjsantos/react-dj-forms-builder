@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { isFunction, isInteger, isObject, toLower } from '../tools';
-import { FieldCheckbox, FieldDropdown, FieldRadioGroup, FieldInput, FieldTextarea } from '../fields';
+import { FieldCheckbox, FieldDropdown, FieldRadioGroup, FieldInput, FieldTextarea, FieldNone } from '../fields';
 
 import ChildRender from './childRender.js';
 import { FIELD_TYPE } from './fieldType.js';
@@ -15,7 +15,7 @@ const getComponentByFieldType = (fieldType, overrides) => {
         case FIELD_TYPE.RADIO_GROUP: return overrideWithDefault(fieldType, FieldRadioGroup);
         case FIELD_TYPE.INPUT: return overrideWithDefault(fieldType, FieldInput);
         case FIELD_TYPE.TEXTAREA: return overrideWithDefault(fieldType, FieldTextarea);
-        case FIELD_TYPE.NONE:
+        case FIELD_TYPE.NONE: return FieldNone;
         default:
             return () => <></>;
     }

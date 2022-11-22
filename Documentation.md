@@ -205,7 +205,9 @@ A JSON object with its properties.
 
     * **'none'**
 
-        In fact its a empty component. Only the grid and container struture will be rendered, applying the indicated class selector. It may be used to create a container for dinamic interation.
+        In fact its a empty component. Only the grid and container struture will be rendered, applying the indicated class selector and also the children within. It may be used to create a container for dinamic interation or to render children inside a empty parent field group.
+
+        > If you need, you may control the chindren render with field properties. If 'hideChildren' where true and 'value' where not considered a *true value* the children will not be rendered.
 
     * **'custom'**
         
