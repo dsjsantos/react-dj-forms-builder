@@ -169,6 +169,13 @@ npm run build
 
 ## Changelogs
 
+#### v1.1.2 (November 23, 2022)
+##### Added
+- New component properties 'blockFieldUpdate' and 'disableClearErrorOnFieldChange'
+
+##### Fixed
+- Change internal fields state changes cheking
+
 #### v1.1.1 (November 22, 2022)
 ##### Fixed
 - "none" field type now renders its children correctly

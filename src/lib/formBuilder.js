@@ -103,7 +103,9 @@ class FormBuilder extends React.PureComponent {
             return;
         }
         updateFields[name].value = masked;
-        updateFields[name].errorMessage = null;
+        if(this.props.disableClearErrorOnFieldChange!==true) {
+            updateFields[name].errorMessage = null;
+        }
         this.setState({ fields: updateFields }, this._updateFields(updateFields, name, value));
     }
 
@@ -125,11 +127,11 @@ class FormBuilder extends React.PureComponent {
     }
     
     componentDidUpdate(prevProps) {
-        const { config, fields, page } = this.props;
+        const { config, fields, page, blockFieldUpdate } = this.props;
         if(prevProps.config!==config || prevProps.page!==page) {
             this._updateOverridesAndValidations(prevProps.page!==page);
         }
-        if(prevProps.fields!==fields && isObject(fields) && JSON.stringify(fields)!==JSON.stringify(this.state.fields)) {
+        if(blockFieldUpdate!==true && isObject(fields) && JSON.stringify(fields)!==JSON.stringify(this.state.fields)) {
             // Clone object to isolate the internal fields object from caller's (binded to properties)
             this.setState({
                 fields: deepCloneObject(fields, {}) 

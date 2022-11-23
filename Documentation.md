@@ -32,6 +32,12 @@
         }
         ```
 
+        > The component makes a deep comparison in order to to check if the fields state has chenged. See 'blockFieldUpdate' if you what to control when to update.
+
+    * blockFieldUpdate: (Optional) [true | false] if true the component internal fields state ('value', 'errorMessage', 'disabled') won't be changed when 'fields' property where changed. *(default is false)*. You may use it to control when to change the internal component fields state.
+
+    * disableClearErrorOnFieldChange: (Optional) [true | false] if true the field error message won't be cleaned when changing field vaule. *(default is false)*. In other words it changes the default component behavior to clean the field error message when its value is changed.
+
     * page: (Optional) page to be rendered. *(default is the first page: 0)*.
 
     * id: (Optional) it's the element id for the component root element.
