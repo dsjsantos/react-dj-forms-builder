@@ -169,10 +169,13 @@ npm run build
 
 ## Changelogs
 
+#### v1.2.0 (December 09, 2022)
+##### Added
+- Add optional extra parameters to 'onChange' call to be used with custom components.
+
 #### v1.1.2 (November 23, 2022)
 ##### Added
 - New component properties 'blockFieldUpdate' and 'disableClearErrorOnFieldChange'
-
 ##### Fixed
 - Change internal fields state changes cheking
 

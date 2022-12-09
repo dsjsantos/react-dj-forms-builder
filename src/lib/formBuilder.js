@@ -71,7 +71,7 @@ class FormBuilder extends React.PureComponent {
         return formConfig.pages;
     }
 
-    _handleChange = (e, { name, value, inputRegEx, removeMask, addMask }) => {
+    _handleChange = (e, { name, value, inputRegEx, removeMask, addMask }, ...arrExtra) => {
         if(e) {
             e.stopPropagation();
         }
@@ -106,12 +106,12 @@ class FormBuilder extends React.PureComponent {
         if(this.props.disableClearErrorOnFieldChange!==true) {
             updateFields[name].errorMessage = null;
         }
-        this.setState({ fields: updateFields }, this._updateFields(updateFields, name, value));
+        this.setState({ fields: updateFields }, this._updateFields(updateFields, name, value, ...arrExtra));
     }
 
-    _updateFields = (fields, name, value) => {
+    _updateFields = (fields, name, value, ...arrExtra) => {
         const fieldCopy = deepCloneObject(fields, {}); // Isolate internal fields object from caller's
-        this.props.onChange(fieldCopy, name, value);
+        this.props.onChange(fieldCopy, name, value, ...arrExtra);
     }
 
     _updateOverridesAndValidations = (pageChanged) => {

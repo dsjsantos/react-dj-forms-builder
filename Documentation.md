@@ -16,9 +16,14 @@
 
     * config: (Required) form configurarion JSON object as explained on section *2* below. You should avoid repeat field name/key in configuration file. Different fields (even in different pages, different groups or nested) with same name/key will share the same basic state properties ('value', 'errorMessage', 'disabled').
 
-    * onChange: (Required) callback for fields value changes for parent control and treatment. If it were trigger by a field update the function will also receive the field 'name' and the new 'value' as parameters.
+    * onChange: (Required) callback for fields value changes for parent control and treatment. If it were trigger by a field update the function will receive parameters as follows:
 
-        > e.g.: (fields, name, value) => { this.setState({ fields: fields }) }
+        - 'fields': (Always) it an object where each key represents a form field and points to an object with its current state ('value', 'errorMessage', 'disabled').
+        - 'name': (Only on field update) if triggered by a field update it contains the changed field name.
+        - 'value': (Only on field update) if triggered by a field update it contains its new value.
+        - 'optional1', 'optional2', ...: (Optional for custom components) these are an extra parameters that may be used in custom components to pass extra parameters when a field update is triggered. See render time 'onChange' property.<br/><br/>
+
+        > e.g.: (fields, name, value, extra1) => { this.setState({ fields: fields }) }
 
     * fields: (Optional) if informed, it generaly should refflect the internal component state (same object received on 'onChange' method call). This object contains the main form fields current state ('value', 'errorMessage', 'disabled'). If, on a render, it differs from the internal's component state it will replace it and triggers the 'onChange'. If set, this object will overrides the field's 3 (three) namesake properties. This property is necessary only when you need to control the properties 'value', 'errorMessage' or 'disabled' from a form's field otherwise you may leave it unset.
 
@@ -455,7 +460,7 @@ This properties aren't expect to be in configuration object but they are create 
 
 - onChange: function to be called on field value change. This event handler expect two parameters - the event object and an object with integration properties as follows:
 
-    *onChange(event, { name, value, inputRegEx, removeMask, addMask })*
+    *onChange(event, { name, value, inputRegEx, removeMask, addMask }, optional1, optional2, ...)*
 
     - event: event object
 
@@ -468,14 +473,16 @@ This properties aren't expect to be in configuration object but they are create 
     - addMask: (Optional) same as field configuration property 'maskAdd' but at at component level. If present, this one will be used instead of 'maskAdd'.
     
     - removeMask: same as field configuration property 'maskRemove' but at at component level. If present, this one will be used instead of 'maskRemove'.
+
+    - optional1, optional2, ...: (Optional) these are extra optional parameter that your custom component may add to 'onChange' call. All extra optional parameters added will be propagated to main componente 'onChange' call.
     
     See, at Demo 3, the custom component 'CustomDateWithDatePicker'. This custom component uses this 3 (three) extra properties ('inputRegEx', 'addMask', 'removeMask') when call 'onChange'
     
     > ***field types:** All except "checkbox"*
 
-- onToggle: function to be called on checkbox click to toggle it value. This event handler expect the event object and an object as follows:
+- onToggle: function to be called on checkbox click to toggle it value. This event handler expect the event object as follows:
 
-    *onChange(event)*
+    *onToggle(event)*
 
     - event: event object
 
