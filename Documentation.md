@@ -47,9 +47,9 @@
 
     * id: (Optional) it's the element id for the component root element.
 
-    * rootAsForm: (Optional) [true | false] if true, the component root element will be a <form></form> element, otherwise the root element will be a <div></div> *(default is false)*
+    * rootAsForm: (Optional) [true | false] if true, the component root element will be a &lt;form&gt;&lt;/form&gt; element, otherwise the root element will be a &lt;div&gt;&lt;/div&gt; *(default is false)*
 
-    * name: (Optional) it's the <form></form> element name if 'rootAsForm' were true, otherwise will be ignored.
+    * name: (Optional) it's the &lt;form&gt;&lt;/form&gt; element name if 'rootAsForm' were true, otherwise will be ignored.
 
     * className: (Optional) it is the CSS class for the component root element.
 
