@@ -169,9 +169,15 @@ npm run build
 
 ## Changelogs
 
+#### v1.2.1 (September 12, 2024)
+##### Added
+- Add component and functions types and definitions
+##### Changes
+- Update dependencies versions
+
 #### v1.2.0 (December 09, 2022)
 ##### Added
-- Add optional extra parameters to 'onChange' call to be used with custom components.
+- Add optional extra parameters to 'onChange' call to be used with custom components
 
 #### v1.1.2 (November 23, 2022)
 ##### Added

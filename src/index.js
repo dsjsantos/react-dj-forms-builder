@@ -4,7 +4,7 @@ import { FieldCheckbox, FieldDropdown, FieldInput, FieldRadioGroup, FieldTextare
 const FormBuilderFields = { FieldCheckbox, FieldDropdown, FieldInput, FieldRadioGroup, FieldTextarea };
 const FormBuilderSupportFields = { Counter, RequiredMark };
 
-const FormBuilder = require('./lib/formBuilder.js').default;
+const FormBuilder = require('./formBuilder.js').default;
 
 export {
     FormBuilder,

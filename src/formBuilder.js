@@ -8,8 +8,8 @@
 import React from 'react';
 
 import { buildGroupsFieldsState, buildGroupsValidation, buildPageFieldsState, buildPageValidation,
-        buildCustomFieldComponentsList, buildRenderOverrides, deepCloneObject, isArray, isObject } from './tools';
-import { GroupRender } from './renders';
+        buildCustomFieldComponentsList, buildRenderOverrides, deepCloneObject, isArray, isObject } from './lib/tools';
+import { GroupRender } from './lib/renders';
 
 
 // Import module styles

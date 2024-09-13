@@ -1,0 +1,18 @@
+{
+  "include": ["src"], /* Include only the src directory */
+  "exclude": ["node_modules", "dist"], /* Exclui a pasta node_modules */
+  "compilerOptions": {
+    "declaration": true, /* Generate .d.ts files from TypeScript and JavaScript files in your project. */
+    "emitDeclarationOnly": true, /* Only emit .d.ts files; do not emit .js files. */
+    "allowJs": true, /* Allow JavaScript files to be a part of your program. Use the 'checkJS' option to get errors from these files. */
+    "target": "es2016" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
+    "module": "commonjs" /* Specify what module code is generated. */,
+    "outDir": "dist/types",
+    "esModuleInterop": true /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */,
+    "isolatedModules": true, /* Ensure that Babel can safely transpile files in the TypeScript project */
+    "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
+    "strict": true /* Enable all strict type-checking options. */,
+    "skipLibCheck": true, /* Skip type checking all .d.ts files. */
+    "moduleResolution": "node" /* Resolve módulos como o Node.js */
+  } /* Visit https://aka.ms/tsconfig to read more about this file */
+}

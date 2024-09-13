@@ -15,10 +15,17 @@ var config = {
   module: {
     rules: [
       {
-        test: /\.js?$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader'
+        }
+      },
+      {
+        test: /\.tsx?$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'ts-loader'
         }
       },
       {
@@ -27,24 +34,11 @@ var config = {
           'style-loader',
           'css-loader'
         ]
-      },
+      }
     ],
   },
-  externals: [ // Don't bundle react or react-dom
-    {
-      react: {
-        root: 'React',
-        commonjs: 'react',
-        commonjs2: 'react',
-        amd: 'react'
-      },
-      'react-dom': {
-        root: 'ReactDOM',
-        commonjs: 'react-dom',
-        commonjs2: 'react-dom',
-        amd: 'react-dom'
-      }
-    }
+  externals: [ // Don't bundle any module from node_module
+    /^[a-z0-9@][a-z0-9/@\-._]*$/i
   ]
 };
 

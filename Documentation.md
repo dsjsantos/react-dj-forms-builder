@@ -14,6 +14,8 @@
 
 * *props:*
 
+    * id: (Optional) it's the element id for the component root element.
+
     * config: (Required) form configurarion JSON object as explained on section *2* below. You should avoid repeat field name/key in configuration file. Different fields (even in different pages, different groups or nested) with same name/key will share the same basic state properties ('value', 'errorMessage', 'disabled').
 
     * onChange: (Required) callback for fields value changes for parent control and treatment. If it were trigger by a field update the function will receive parameters as follows:
@@ -31,9 +33,10 @@
         {
             field_name: {
                 value: "",
-                erroMessage: "",
+                errorMessage: "",
                 disabled: ""
             }
+            ...
         }
         ```
 
@@ -44,8 +47,6 @@
     * disableClearErrorOnFieldChange: (Optional) [true | false] if true the field error message won't be cleaned when changing field vaule. *(default is false)*. In other words it changes the default component behavior to clean the field error message when its value is changed.
 
     * page: (Optional) page to be rendered. *(default is the first page: 0)*.
-
-    * id: (Optional) it's the element id for the component root element.
 
     * rootAsForm: (Optional) [true | false] if true, the component root element will be a &lt;form&gt;&lt;/form&gt; element, otherwise the root element will be a &lt;div&gt;&lt;/div&gt; *(default is false)*
 
